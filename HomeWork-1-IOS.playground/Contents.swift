@@ -17,6 +17,16 @@ enum lectureName : String {
         }
 }
 
+class Student {
+    var nameSurname : String
+
+    init (_ nameSurname : String){
+        self.nameSurname = nameSurname
+    }
+}
+
+var student1 = Student("Aleyna Mandacı")
+
 
 
 
