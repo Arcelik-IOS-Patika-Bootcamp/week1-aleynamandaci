@@ -42,6 +42,28 @@ var student1 = Student("Aleyna Mandacı")
 var student2 = Student("Ali Yılmaz")
 var student3 = Student("Mehmet Er")
 
+// dictionary for students and their garde average
+var gradeList : [String : [String : Float]] = [
+    student1.nameSurname : [
+        lectureName.chemistry.lecture() :
+            student1.gradeAverage(lectureName: .chemistry, midterm: 67, final: 43) ,
+        lectureName.physics.lecture() :
+            student1.gradeAverage(lectureName: .physics, midterm: 39, final: 78)
+    ],
+    
+    student2.nameSurname : [
+        lectureName.geometry.lecture() :
+            student2.gradeAverage(lectureName: .geometry, midterm: nil, final: 86) ,
+        lectureName.math.lecture() :
+            student2.gradeAverage(lectureName: .math, midterm: 53, final: 56)
+    ],
+    
+    student3.nameSurname : [
+        lectureName.physics.lecture() :
+            student3.gradeAverage(lectureName: .physics, midterm: 94, final: 73)
+    ]
+]
+
 
 
 
