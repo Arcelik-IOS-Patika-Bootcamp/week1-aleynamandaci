@@ -64,11 +64,25 @@ var gradeList : [String : [String : Float]] = [
     ]
 ]
 
-// mathGrades array 
+// mathGrades array
 var mathGrades : [Float] = [student1.gradeAverage(lectureName: .math, midterm: 40, final: 50)]
 
 mathGrades.append(student3.gradeAverage(lectureName: .math, midterm: nil, final: 100))
 mathGrades.insert(student2.gradeAverage(lectureName: .math, midterm: 39, final: 72), at: 1)
+
+//function for success of the class in the lecture
+func passCounterForMath () -> String {
+    var passCounter = 0
+    var leftoverCounter = 0
+
+    for grade in mathGrades {
+        if grade >= 60 {
+            passCounter += 1
+        }else{ leftoverCounter += 1 }
+    }
+    return "Matematik dersinden \(passCounter) kişi geçti, \(leftoverCounter) kişi kaldı."
+}
+passCounterForMath()
 
 
 
