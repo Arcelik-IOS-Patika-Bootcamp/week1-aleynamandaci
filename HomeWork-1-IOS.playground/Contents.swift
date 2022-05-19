@@ -64,6 +64,11 @@ var gradeList : [String : [String : Float]] = [
     ]
 ]
 
+// mathGrades array 
+var mathGrades : [Float] = [student1.gradeAverage(lectureName: .math, midterm: 40, final: 50)]
+
+mathGrades.append(student3.gradeAverage(lectureName: .math, midterm: nil, final: 100))
+mathGrades.insert(student2.gradeAverage(lectureName: .math, midterm: 39, final: 72), at: 1)
 
 
 
